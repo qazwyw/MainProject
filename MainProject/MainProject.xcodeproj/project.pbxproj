@@ -13,8 +13,24 @@
 		18E9752D1F9DCEFC00D69120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E9752C1F9DCEFC00D69120 /* Assets.xcassets */; };
 		18E975301F9DCEFC00D69120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E9752E1F9DCEFC00D69120 /* LaunchScreen.storyboard */; };
 		18E975331F9DCEFC00D69120 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E975321F9DCEFC00D69120 /* main.m */; };
-		18E9753A1F9DCF9D00D69120 /* SubModule1 in Resources */ = {isa = PBXBuildFile; fileRef = 18E975391F9DCF9D00D69120 /* SubModule1 */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18E975461F9DD90100D69120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E975421F9DD90100D69120 /* SubModule1.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18E974F81F9DCDC600D69120;
+			remoteInfo = SubModule1;
+		};
+		18E975481F9DD93D00D69120 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E975421F9DD90100D69120 /* SubModule1.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 18E974F71F9DCDC600D69120;
+			remoteInfo = SubModule1;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		18E975201F9DCEFC00D69120 /* MainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,7 +43,7 @@
 		18E9752F1F9DCEFC00D69120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E975311F9DCEFC00D69120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E975321F9DCEFC00D69120 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		18E975391F9DCF9D00D69120 /* SubModule1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SubModule1; path = ../lib/SubModule1; sourceTree = "<group>"; };
+		18E975421F9DD90100D69120 /* SubModule1.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SubModule1.xcodeproj; path = ../lib/SubModule1/SubModule1.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +62,7 @@
 			children = (
 				18E975221F9DCEFC00D69120 /* MainProject */,
 				18E975211F9DCEFC00D69120 /* Products */,
-				18E975391F9DCF9D00D69120 /* SubModule1 */,
+				18E975421F9DD90100D69120 /* SubModule1.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +90,14 @@
 			path = MainProject;
 			sourceTree = "<group>";
 		};
+		18E975431F9DD90100D69120 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18E975471F9DD90100D69120 /* SubModule1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,6 +112,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				18E975491F9DD93D00D69120 /* PBXTargetDependency */,
 			);
 			name = MainProject;
 			productName = MainProject;
@@ -120,12 +145,28 @@
 			mainGroup = 18E975171F9DCEFC00D69120;
 			productRefGroup = 18E975211F9DCEFC00D69120 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 18E975431F9DD90100D69120 /* Products */;
+					ProjectRef = 18E975421F9DD90100D69120 /* SubModule1.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18E9751F1F9DCEFC00D69120 /* MainProject */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		18E975471F9DD90100D69120 /* SubModule1.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SubModule1.app;
+			remoteRef = 18E975461F9DD90100D69120 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		18E9751E1F9DCEFC00D69120 /* Resources */ = {
@@ -135,7 +176,6 @@
 				18E975301F9DCEFC00D69120 /* LaunchScreen.storyboard in Resources */,
 				18E9752D1F9DCEFC00D69120 /* Assets.xcassets in Resources */,
 				18E9752B1F9DCEFC00D69120 /* Main.storyboard in Resources */,
-				18E9753A1F9DCF9D00D69120 /* SubModule1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +193,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18E975491F9DD93D00D69120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SubModule1;
+			targetProxy = 18E975481F9DD93D00D69120 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		18E975291F9DCEFC00D69120 /* Main.storyboard */ = {
@@ -284,6 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U2Q56B8Q5;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"/**";
 				INFOPLIST_FILE = MainProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -299,6 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U2Q56B8Q5;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"/**";
 				INFOPLIST_FILE = MainProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

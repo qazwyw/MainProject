@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+//#import <UIView+frame.h>
+#import <NSObject+Intro.h>
+#import <ModuleObj.h>
 
 @interface ViewController ()
 
@@ -16,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//    [self.view intro];
+//    NSObject *obj = [[NSObject alloc]init];
+//    [obj intro];
+    ModuleObj *mo = [[ModuleObj alloc]init];
+    [mo talk];
 }
 
 
